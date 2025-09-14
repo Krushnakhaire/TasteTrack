@@ -1,26 +1,58 @@
-import React from 'react'
-// import { Navbar } from './components/Navbar/Navbar'
+// import React from 'react'
+// import { Navbar } from './components/Navbar/Navbar/Navbar'
+// import { Routes,Route } from 'react-router-dom'
+// import  Home from './pages/Home/Home'
+// import Cart from './pages/Cart/Cart'
+// import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
+// import Footer from './components/Footer/Footer'
+// //import './App.css'
+
+
+// const App = () => {
+
+//   const [showLogin,setShowLogin]=useState(false)
+//   return (
+//     <>
+//     {showLogin?<LoginPopup/>:<></>}
+//     <div className='app'>
+//       <Navbar setShowLogin={setShowLogin} />
+//       <Routes>
+//        <Route path='/' element={<Home />} />
+//        <Route path='/cart' element={<Cart />} />
+//        <Route path='/order' element={<PlaceOrder />} />
+//      </Routes>
+//     </div>
+//     <Footer/>
+//     </>
+//   )
+// }
+
+// export default App
+
+
+import React, { useState } from 'react'
 import { Navbar } from './components/Navbar/Navbar/Navbar'
-import { Routes,Route } from 'react-router-dom'
-import  Home from './pages/Home/Home'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home/Home'
 import Cart from './pages/Cart/Cart'
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 import Footer from './components/Footer/Footer'
 //import './App.css'
 
-
 const App = () => {
+  const [showLogin, setShowLogin] = useState(false)
   return (
     <>
-    <div className='app'>
-      <Navbar />
-      <Routes>
-       <Route path='/' element={<Home />} />
-       <Route path='/cart' element={<Cart />} />
-       <Route path='/order' element={<PlaceOrder />} />
-     </Routes>
-    </div>
-    <Footer/>
+      {showLogin ? <LoginPopup /> : <></>}
+      <div className='app'>
+        <Navbar setShowLogin={setShowLogin} />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/order' element={<PlaceOrder />} />
+        </Routes>
+      </div>
+      <Footer />
     </>
   )
 }
