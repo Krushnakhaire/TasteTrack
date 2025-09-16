@@ -60,13 +60,11 @@
     gap:8px;
     margin-top:-15px;
 }
-.login-popup-condition{
-    margin:5px;
-
-
+.login-popup-condition input{
+    margin-top:5px;
 }
 .login-popup p span{
     color:tomato;
-    font-weight: 600;
+    font-weight: 500;
     cursor:pointer;
 }
