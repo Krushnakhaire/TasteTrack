@@ -9,8 +9,8 @@ export const Navbar = ({setShowLogin}) => {
 
   return (
     <div className='navbar'>
-     {/* <Link to='/'> <img src={assets.logo} alt="Logo" className='logo' /></Link> */}
-      <img src={assets.logo} alt="Logo" className='logo' />
+     <Link to='/'> <img src={assets.logo} alt="Logo" className='logo' /></Link>
+      {/* <img src={assets.logo} alt="Logo" className='logo' /> */}
       <ul className='navbar-menu'>
         <Link to='/' className={menu === "Home" ? "active" : ""} onClick={() => setMenu("Home")}>Home</Link>
         <a href="#explore-menu"className={menu === "Menu" ? "active" : ""} onClick={() => setMenu("Menu")}>Menu</a>
@@ -20,9 +20,9 @@ export const Navbar = ({setShowLogin}) => {
       <div className='navbar-right'>
         <img src={assets.search_icon} alt="Search" />
         <div className='navbar-search-icon'>
-          {/* <Link to='/cart'> */}
+          <Link to='/cart'>
           <img src={assets.basket_icon} alt="Basket" />
-            {/* </Link> */}
+            </Link>
           <div className='dot'></div>
         </div>
         <button onClick={()=>setShowLogin(true)}>Sign In</button>
