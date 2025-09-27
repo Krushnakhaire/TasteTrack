@@ -117,3 +117,13 @@
     border-radius:0px 4px 4px 0px;
     cursor:pointer;
 }
+@media(max-width:750px){
+    .cart-bottom{
+        flex-direction:column-reverse;
+
+    }
+    .cart-promocode{
+        justify-content: start;
+    }
+
+}
