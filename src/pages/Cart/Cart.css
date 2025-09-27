@@ -79,3 +79,32 @@
 .cart-total.hr{
     margin:10px 0px;
 }
+.cart-total button{
+    border:none;
+    color:white;
+    background-color: tomato;
+    padding:12x 0px;
+    width:max(15vw,200px);
+    border-radius:4px;
+    cursor:pointer;
+}
+.cart-promocode{
+    flex:1;
+}
+.cart-promocode p{
+    color:#555;
+}
+.cart-promocode input{
+    margin-top:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color: #eaeaea;
+    border-radius: 4px;
+}
+.cart-promocode-input input{
+    background:transparent;
+    border:none;
+    padding-left:10px;
+    outline: none;
+}
