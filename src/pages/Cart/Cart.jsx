@@ -3,7 +3,11 @@ import './Cart.css'
 import { StoreContext } from '../../context/StoreContext'
 
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart } = useContext(StoreContext);
+  const { cartItems, food_list, removeFromCart, getTotalCartAmount } = useContext(StoreContext);
+
+  const deliveryFee = 2;
+  const subtotal = getTotalCartAmount();
+  const total = subtotal + deliveryFee;
 
   return (
     <div className='cart'>
@@ -18,12 +22,12 @@ const Cart = () => {
         </div>
         <br />
         <hr />
-        {food_list.map((item, index) => {
+        {food_list.map((item) => {
           if (cartItems[item._id] > 0) {
             return (
               <React.Fragment key={item._id}>
                 <div className='cart-items-item'>
-                  <img src={item.image} alt='' />
+                  <img src={item.image} alt={item.name} />
                   <p>{item.name}</p>
                   <p>${item.price}</p>
                   <p>{cartItems[item._id]}</p>
@@ -43,17 +47,17 @@ const Cart = () => {
           <div>
             <div className='cart-total-details'>
               <p>Subtotal</p>
-              <p>{0}</p>
+              <p>${subtotal}</p>
             </div>
             <hr />
             <div className='cart-total-details'>
               <p>Delivery Fee</p>
-              <p>{2}</p>
+              <p>${deliveryFee}</p>
             </div>
             <hr />
             <div className='cart-total-details'>
               <b>Total</b>
-              <b>{0}</b>
+              <b>${total}</b>
             </div>
             <hr />
             <button>PROCEED TO CHECKOUT</button>
