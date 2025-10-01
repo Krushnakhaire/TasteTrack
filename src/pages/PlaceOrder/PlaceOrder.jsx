@@ -4,6 +4,8 @@ import { StoreContext } from '../../context/StoreContext'
 const PlaceOrder = () => {
 
   const  {getTotalCartAmount}=useContext(StoreContext);
+
+
   return (
     <form className='place-order'>
       <div className='place-order-left'>
@@ -42,9 +44,9 @@ const PlaceOrder = () => {
           <b>Total</b>
           <b>${getTotalCartAmount()+2}</b>
         </div>
+      <button >PROCEED TO PAYMENT </button>
 
       </div>
-      <button >PROCEED TO PAYMENT </button>
       
     </form>
   )
