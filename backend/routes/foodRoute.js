@@ -4,7 +4,7 @@ import multer from "multer";
 
 const foodRouter=express.Router();
 
-
+foodRouter.post("/add/food",addFood)
 
 
 export default  foodRouter;
